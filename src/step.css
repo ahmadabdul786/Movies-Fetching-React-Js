@@ -1,0 +1,70 @@
+.mainn{
+    display: flex;
+}
+.contain{
+    border: 1px solid black;
+     height:300px;
+     width:400px;
+      background-color:lightgray;
+      border-radius: 4px;
+    
+}
+.numbers{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.numbers div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: aquamarine;
+}
+
+.numbers .active{
+    background-color: rgb(21, 102, 129);
+}
+.contain p{
+    margin-left: 140px;
+    margin-top: 80px;
+    font-size: 15px;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+    border-radius: 30px;
+    border-color: aqua;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    
+
+}
+
+.btnn {
+    color: inherit;
+    font-family: inherit;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    background-color: #d8a90f;
+    padding: 1.4rem 3.2rem;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .btnn:hover {
+    background-color: #e9bb24;
+  }
+.close{
+    font-size: 25px;
+ 
+    cursor: pointer;
+    
+    
+}

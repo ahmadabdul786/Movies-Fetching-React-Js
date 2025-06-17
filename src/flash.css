@@ -1,0 +1,36 @@
+.main{
+    height: 50rem;
+    background-color: rgb(183, 183, 240);
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+.card{
+    height: 15rem;
+    background-color: aqua;
+    border-radius: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   cursor: pointer;
+    
+}
+.card p{
+    color: black;
+}
+.cardactive{
+background-color: rgb(199, 88, 175);
+
+height: 15rem;
+
+border-radius: 2px;
+padding-left: 5px;
+padding-right: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+color: white;
+}
