@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 //import "./index.css";
 //import ProfileCard from "./profileCard";
 //import StepComp from "./stepComp";
-import DateCounter from "./dateConter";
+//import DateCounter from "./dateConter";
 //import FlashCards from "./flashCards";
 //import Budgety from "./Budgety";
 //import UsePopCorn from "./usePopcorn";
