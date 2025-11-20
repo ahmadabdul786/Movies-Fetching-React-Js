@@ -108,7 +108,9 @@ export default function UsePopCorn() {
   
   const [watched, setWatched] = useState(function(){
     const storedValue = localStorage.getItem('watched');
-    return JSON.parse(storedValue);
+    if(storedValue) return JSON.parse(storedValue);
+    return [];
+    
   });
   
 function settingId(id){
@@ -118,7 +120,7 @@ function closingMovieDetails(){
   setSelectedId(null);
 }
 function handleAddWatched(movie){
-  setWatched(watched => [...watched,movie]);
+   setWatched(watched => [...watched,movie]);
 }
 useEffect(function(){
     localStorage.setItem('watched',JSON.stringify(watched));
@@ -129,6 +131,7 @@ function handleDeleteItem(id){
 }
   
 const {isLoading,movies,error} = useMovies(query);
+
   return (
     <>
       <NavBar>
@@ -151,8 +154,10 @@ const {isLoading,movies,error} = useMovies(query);
       setSelectedId={setSelectedId} 
       closingMovieDetails={closingMovieDetails}
     handleAddWatched={handleAddWatched}
-    watched={watched}/>:
-    <><WatchedSummary watched={watched}/>
+    watched={watched}
+    />:
+    <>
+    <WatchedSummary watched={watched}/>
     <WatchedmovieList deleteWatchedMovie={handleDeleteItem} watched={watched}/>
     </>}
     </Box>
@@ -260,9 +265,11 @@ handleAddWatched(newWatchedMovie);
 setSelectedId(null);
   }
 
-  const isWatched = watched.map((movie)=>movie.imdbID).includes(selectedId);
-  const Rated = watched.find(movie=> movie.imdbID ===selectedId)?.userRating;
-  console.log(Rated);
+   const isWatched = watched?.map((movie)=>movie.imdbID).includes(selectedId);
+  //const isWatched = false;
+   const Rated = watched?.find(movie=> movie.imdbID ===selectedId)?.userRating;
+  // console.log(Rated);
+  //const Rated = 3;
 
 useEffect(function(){
   async function fetchMovieDetails(){
